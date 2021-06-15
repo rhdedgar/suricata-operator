@@ -1,0 +1,24 @@
+# permissions for end users to edit suricata.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: suricata-editor-role
+rules:
+- apiGroups:
+  - managed.openshift.io
+  resources:
+  - suricata
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - managed.openshift.io
+  resources:
+  - suricata/status
+  verbs:
+  - get
