@@ -37,8 +37,9 @@ import (
 )
 
 var (
-	scheme   = runtime.NewScheme()
-	setupLog = ctrl.Log.WithName("setup")
+	scheme    = runtime.NewScheme()
+	setupLog  = ctrl.Log.WithName("setup")
+	namespace = "openshift-suricata-operator"
 )
 
 func init() {
@@ -72,6 +73,7 @@ func main() {
 		HealthProbeBindAddress: probeAddr,
 		LeaderElection:         enableLeaderElection,
 		LeaderElectionID:       "0cc37907.openshift.io",
+		Namespace:              namespace,
 	})
 	if err != nil {
 		setupLog.Error(err, "unable to start manager")
