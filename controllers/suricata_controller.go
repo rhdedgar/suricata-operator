@@ -40,9 +40,9 @@ type SuricataReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-// +kubebuilder:rbac:groups=managed.openshift.io,namespace="openshift-suricata-operator",resources=scanners,verbs=get;list;watch;create;update;patch;delete
-// +kubebuilder:rbac:groups=managed.openshift.io,namespace="openshift-suricata-operator",resources=scanners/status,verbs=get;update;patch
-// +kubebuilder:rbac:groups=managed.openshift.io,namespace="openshift-suricata-operator",resources=scanners/finalizers,verbs=update
+// +kubebuilder:rbac:groups=managed.openshift.io,namespace="openshift-suricata-operator",resources=suricatas,verbs=get;list;watch;create;update;patch;delete
+// +kubebuilder:rbac:groups=managed.openshift.io,namespace="openshift-suricata-operator",resources=suricatas/status,verbs=get;update;patch
+// +kubebuilder:rbac:groups=managed.openshift.io,namespace="openshift-suricata-operator",resources=suricatas/finalizers,verbs=update
 
 // +kubebuilder:rbac:groups=security.openshift.io,namespace="openshift-suricata-operator",resources=securitycontextconstraints,verbs=use
 // +kubebuilder:rbac:groups=security.openshift.io,namespace="openshift-suricata-operator",resources=securitycontextconstraints,verbs=get;create;update

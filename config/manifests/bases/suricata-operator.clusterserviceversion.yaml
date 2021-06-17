@@ -1,0 +1,53 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: openshift-suricata-operator.v0.0.1
+  namespace: openshift-suricata-operator
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Suricata is the Schema for the suricata API
+      displayName: Suricata
+      kind: Suricata
+      name: suricata.managed.openshift.io
+      version: v1alpha1
+  description: Managed deployment of suricata daemonset to monitor underlying infra
+    as a Host Based Intrusion Detection System (HIDS)
+  displayName: suricata-operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: true
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: false
+    type: AllNamespaces
+  keywords:
+  - security
+  - compliance
+  - detection
+  - suricata
+  - suricata-operator
+  links:
+  - name: Suricata Operator
+    url: https://suricata-operator.domain
+  maintainers:
+  - email: dedgar@redhat.com
+    name: Doug Edgar
+  maturity: alpha
+  provider:
+    name: suricata-operator
+    url: https://github.com/rhdedgar/suricata-operator
+  version: 0.0.1

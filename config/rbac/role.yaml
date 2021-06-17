@@ -52,7 +52,7 @@ rules:
 - apiGroups:
   - managed.openshift.io
   resources:
-  - scanners
+  - suricatas
   verbs:
   - create
   - delete
@@ -64,13 +64,13 @@ rules:
 - apiGroups:
   - managed.openshift.io
   resources:
-  - scanners/finalizers
+  - suricatas/finalizers
   verbs:
   - update
 - apiGroups:
   - managed.openshift.io
   resources:
-  - scanners/status
+  - suricatas/status
   verbs:
   - get
   - patch
