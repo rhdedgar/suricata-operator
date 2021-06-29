@@ -49,6 +49,7 @@ type SuricataReconciler struct {
 // +kubebuilder:rbac:groups=security.openshift.io,namespace="openshift-suricata-operator",resourceNames=privileged,resources=securitycontextconstraints,verbs=get;create;update
 
 // +kubebuilder:rbac:groups=core,namespace="openshift-suricata-operator",resources=pods,verbs=get;list;
+// +kubebuilder:rbac:groups=core,namespace="openshift-suricata-operator",resources=configmaps,verbs=get;list;
 // +kubebuilder:rbac:groups=core,namespace="openshift-suricata-operator",resources=events,verbs=create;watch;list;patch
 // +kubebuilder:rbac:groups=core,namespace="openshift-suricata-operator",resources=secrets;services,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=apps,namespace="openshift-suricata-operator",resources=deployments;daemonsets,verbs=get;list;watch;create;update;patch;delete
