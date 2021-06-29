@@ -32,7 +32,7 @@ func SuricataDaemonSet(m *managedv1alpha1.Suricata) *appsv1.DaemonSet {
 				},
 				Spec: corev1.PodSpec{
 					NodeSelector: map[string]string{
-						"node-role.kubernetes.io/master": "",
+						"beta.kubernetes.io/os": "linux",
 					},
 					Tolerations: []corev1.Toleration{
 						{
