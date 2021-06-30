@@ -1,6 +1,6 @@
 # permissions for end users to view suricata.
 apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
+kind: Role
 metadata:
   name: suricata-viewer-role
 rules:
@@ -15,6 +15,6 @@ rules:
 - apiGroups:
   - managed.openshift.io
   resources:
-  - suricata/status
+  - suricatas/status
   verbs:
   - get

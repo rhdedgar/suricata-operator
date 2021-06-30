@@ -59,8 +59,8 @@ func SuricataDaemonSet(m *managedv1alpha1.Suricata) *appsv1.DaemonSet {
 								corev1.ResourceMemory: resource.MustParse("50Mi"),
 							},
 							Limits: corev1.ResourceList{
-								corev1.ResourceCPU:    resource.MustParse("200m"),
-								corev1.ResourceMemory: resource.MustParse("200Mi"),
+								corev1.ResourceCPU:    resource.MustParse("900m"),
+								corev1.ResourceMemory: resource.MustParse("900Mi"),
 							},
 						},
 						VolumeMounts: []corev1.VolumeMount{{
