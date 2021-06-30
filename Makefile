@@ -100,9 +100,7 @@ run: manifests generate fmt vet ## Run a controller from your host.
 	go run ./main.go
 
 podman-build: test ## Build container image with the manager.
-	podman build --tag ${IMG} .
-
-#	podman build --no-cache --tag ${IMG} .
+	podman build --no-cache --tag ${IMG} .
 
 podman-push: ## Push container image with the manager.
 	podman push ${IMG}
