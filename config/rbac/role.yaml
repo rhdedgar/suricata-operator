@@ -23,13 +23,6 @@ rules:
 - apiGroups:
   - ""
   resources:
-  - configmaps
-  verbs:
-  - get
-  - list
-- apiGroups:
-  - ""
-  resources:
   - events
   verbs:
   - create
