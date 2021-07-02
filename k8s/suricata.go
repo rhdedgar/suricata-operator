@@ -34,6 +34,7 @@ func SuricataDaemonSet(m *managedv1alpha1.Suricata) *appsv1.DaemonSet {
 					NodeSelector: map[string]string{
 						"beta.kubernetes.io/os": "linux",
 					},
+					//ServiceAccountName: "openshift-scanning-operator",
 					Tolerations: []corev1.Toleration{
 						{
 							Operator: corev1.TolerationOpExists,

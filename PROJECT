@@ -15,5 +15,6 @@ resources:
   group: managed
   kind: Suricata
   path: github.com/rhdedgar/suricata-operator/api/v1alpha1
+  plural: suricatas
   version: v1alpha1
 version: "3"

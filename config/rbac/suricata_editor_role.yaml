@@ -1,4 +1,4 @@
-# permissions for end users to edit suricata.
+# permissions for end users to edit suricatas.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -7,7 +7,7 @@ rules:
 - apiGroups:
   - managed.openshift.io
   resources:
-  - suricata
+  - suricatas
   verbs:
   - create
   - delete

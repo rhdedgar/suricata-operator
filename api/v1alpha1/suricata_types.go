@@ -40,8 +40,9 @@ type SuricataStatus struct {
 
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
+//+kubebuilder:resource:path=suricatas
 
-// Suricata is the Schema for the suricata API
+// Suricata is the Schema for the suricatas API
 type Suricata struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
