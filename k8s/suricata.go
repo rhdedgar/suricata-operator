@@ -40,8 +40,9 @@ func SuricataDaemonSet(m *managedv1alpha1.Suricata) *appsv1.DaemonSet {
 							Operator: corev1.TolerationOpExists,
 						},
 					},
+					HostNetwork: true,
 					Containers: []corev1.Container{{
-						Image: "quay.io/dedgar/suricata:v0.0.3",
+						Image: "quay.io/dedgar/suricata:v0.0.4",
 						Name:  "suricata",
 						SecurityContext: &corev1.SecurityContext{
 							Privileged: &privileged,

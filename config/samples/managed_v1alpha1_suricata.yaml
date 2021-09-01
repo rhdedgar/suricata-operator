@@ -1,7 +1,7 @@
 apiVersion: managed.openshift.io/v1alpha1
 kind: Suricata
 metadata:
-  name: suricata-sample
+  name: suricata
 spec:
   # Add fields here
   foo: bar
