@@ -42,8 +42,9 @@ func SuricataDaemonSet(m *managedv1alpha1.Suricata) *appsv1.DaemonSet {
 					},
 					HostNetwork: true,
 					Containers: []corev1.Container{{
-						Image: "quay.io/dedgar/suricata:v0.0.4",
-						Name:  "suricata",
+						Image:           "quay.io/dedgar/suricata:v0.0.7",
+						Name:            "suricata",
+						ImagePullPolicy: corev1.PullAlways,
 						SecurityContext: &corev1.SecurityContext{
 							Privileged: &privileged,
 							RunAsUser:  &runAsUser,
