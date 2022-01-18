@@ -1,5 +1,6 @@
 # Build the manager binary
-FROM golang:1.16 as builder
+# FROM golang:1.16 as builder
+FROM registry.ci.openshift.org/ocp/builder:rhel-8-golang-1.16-openshift-4.8 AS builder
 
 WORKDIR /workspace
 # Copy the Go Modules manifests
